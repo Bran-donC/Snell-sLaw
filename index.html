@@ -1,0 +1,39 @@
+<!--
+    Made by Brandon :)
+    Created: 19/5/2022
+    Last Updated: 19/5/2022
+
+    Snell's law
+    incident index * sin(incident angle) = reflective index * sin(reflective angle)
+    sin(reflective angle) = (incident index * sin(incident angle))/reflective angle
+    reflective angle = arcsin(incident index * sin(incident angle))/reflective angle)
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snell's Law Simulation</title>
+        <link href=style.css rel=stylesheet>
+        <script src=main.js async></script>
+        <meta name=viewport content="width=device-width,initial-scale=1.0">
+    </head>
+
+    <body>
+        n1 sin(θ1) = n2 sin(θ2)
+        <!--Get incident index-->
+        <div>
+            Incidenct Index (n1)
+            <input type="text" value="1.0003" id="incDex" oninput="main()">
+        </div>
+        <!--Get reflective index-->
+        <div>
+            Reflective Index (n2)
+            <input type="text" value="1.333" id="refDex" oninput="main()">
+        </div>
+        <!--Get incident angle-->
+        <div>
+            Incident Angle (θ1)
+            <input type="text" value="45" min="0" max="180" id="incAngle" oninput="main()">
+        </div>
+        <canvas id="rayCanvas"></canvas>
+    </body>
+</html>
