@@ -15,6 +15,8 @@ function main(){
 
     let refAngle = toReverseDegrees(Math.asin(((incIndex * Math.sin(toDegrees(incAngle)))/refIndex)))
 
+
+    document.getElementById('incAngleText').innerHTML = 'Incident Angle (θ1) ' + incAngle + '°'
     document.getElementById('refAngle').innerHTML = 'Reflective Angle '+Math.round(refAngle*100)/100 + '°'
 
     // Create temporary canvas
@@ -49,7 +51,7 @@ function main(){
 
     //Paint reflectived ray
     ctx.beginPath();
-    ctx.strokeStyle = '#00F000'
+    ctx.strokeStyle = '#005F00'
     ctx.moveTo(backCanvas.width/2,backCanvas.height/2);
     ctx.lineTo(backCanvas.width/2+opposite,0);
 
